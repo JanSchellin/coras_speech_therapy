@@ -3,7 +3,7 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-services-page',
-  imports: [NgOptimizedImage],
+  //imports: [NgOptimizedImage],
   templateUrl: './services.html',
   styleUrl: './services.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

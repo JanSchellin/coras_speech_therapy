@@ -20,6 +20,8 @@ describe('App', () => {
     expect(navigationText).toContain('Leistungen');
     expect(navigationText).toContain('Terminvergabe');
     expect(navigationText).toContain('Kontakt');
+    expect(navigationText).not.toContain('Impressum');
+    expect(fixture.nativeElement.querySelector('footer').textContent).toContain('Impressum');
 
     const router = TestBed.inject(Router);
     const routeCopy = [
@@ -27,6 +29,7 @@ describe('App', () => {
       ['/leistungen', 'Sprachentwicklungsstörungen'],
       ['/terminvergabe', 'Was Sie zum ersten Termin mitbringen sollten'],
       ['/kontakt', 'Niedersachsenstraße 64'],
+      ['/impressum', 'Praxis für Logopädie Cora-Zoé Grube'],
     ];
 
     for (const [url, expectedCopy] of routeCopy) {

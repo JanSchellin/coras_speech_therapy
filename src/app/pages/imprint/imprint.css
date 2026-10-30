@@ -1,0 +1,30 @@
+.imprint-hero .hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 18rem;
+  padding-block: 3rem 5rem;
+  align-items: center;
+}
+
+.imprint-content {
+  position: relative;
+  z-index: 1;
+}
+
+.imprint-panel {
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.imprint-panel h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.imprint-panel .section-rule {
+  margin-bottom: 1.25rem;
+}
+
+.imprint-panel address {
+  font-style: normal;
+}

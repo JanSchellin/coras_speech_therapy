@@ -20,6 +20,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact').then((page) => page.ContactPage),
   },
   {
+    path: 'impressum',
+    loadComponent: () =>
+      import('./pages/imprint/imprint').then((page) => page.ImprintPage),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
