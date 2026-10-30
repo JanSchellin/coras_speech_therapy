@@ -1,0 +1,150 @@
+.contact-hero .hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 22rem;
+  padding-block: 3rem 5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-emblem {
+  display: grid;
+  width: min(21rem, 42vw);
+  justify-items: center;
+  color: var(--cobalt);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.hero-emblem img {
+  width: 100%;
+  height: auto;
+  max-height: 16rem;
+  object-fit: contain;
+}
+
+.contact-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-panel {
+  display: grid;
+  padding: 1.3rem 1.5rem;
+  align-items: start;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1.5rem;
+}
+
+.contact-icon {
+  display: grid;
+  width: 6rem;
+  height: 6rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #d7ecff;
+}
+
+.contact-icon svg {
+  width: 3.4rem;
+  stroke: var(--cobalt);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.panel-copy h2 {
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+}
+
+.panel-copy .section-rule {
+  width: 2.2rem;
+  margin-bottom: 0.55rem;
+}
+
+.address {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.directions-panel .panel-copy p + p {
+  margin-top: 0.6rem;
+}
+
+.contact-options {
+  display: grid;
+  margin-top: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--cobalt);
+  line-height: 1.35;
+}
+
+.contact-option + .contact-option {
+  padding-left: 1.4rem;
+  border-left: 1px solid #9ab4d4;
+}
+
+.contact-option-icon {
+  display: grid;
+  width: 3.8rem;
+  height: 3.8rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #d7ecff;
+}
+
+.contact-option-icon svg {
+  width: 1.8rem;
+  stroke: var(--cobalt);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+@media (max-width: 640px) {
+  .contact-hero .hero-inner {
+    min-height: 18rem;
+    padding-block: 2rem 4rem;
+    gap: 1rem;
+  }
+
+  .hero-emblem {
+    width: 40vw;
+    font-size: 0.95rem;
+  }
+
+  .contact-panel {
+    padding: 1.2rem;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .contact-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .contact-icon svg {
+    width: 2.7rem;
+  }
+
+  .contact-options {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .contact-option + .contact-option {
+    padding-left: 0;
+    border-left: 0;
+  }
+}

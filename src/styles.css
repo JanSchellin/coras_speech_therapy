@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: light;
+  --navy: #0a2862;
+  --cobalt: #124996;
+  --frost: #f0f8fe;
+  --powder: #e3f1fc;
+  --ivory: #fffefd;
+  --ink: #274b82;
+  font-family: Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--ivory);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--cobalt);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #3475ce;
+  outline-offset: 4px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--navy);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+p {
+  margin: 0;
+}
+
+.page-width {
+  width: min(100% - 3rem, 69rem);
+  margin-inline: auto;
+}
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 82% 43%, rgb(255 255 255 / 90%) 0 15%, transparent 15.4%),
+    linear-gradient(132deg, var(--frost), #d9edff 58%, #eaf6ff);
+}
+
+.page-hero::after {
+  position: absolute;
+  right: -5%;
+  bottom: -3.4rem;
+  left: -5%;
+  height: 7rem;
+  border-radius: 50% 50% 0 0 / 44% 44% 0 0;
+  background: rgb(255 255 255 / 74%);
+  content: '';
+}
+
+.page-heading {
+  font-size: clamp(3rem, 7vw, 5.2rem);
+  letter-spacing: -0.035em;
+}
+
+.section-rule {
+  width: 4.8rem;
+  height: 2px;
+  background: var(--cobalt);
+}
+
+.lead-copy {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.6;
+}
+
+.soft-panel {
+  border-radius: 0.85rem;
+  background: linear-gradient(115deg, #eff8ff, #e4f2ff);
+}
+
+.page-content {
+  padding-block: 3.5rem 5rem;
+}
+
+.wave-bottom {
+  position: relative;
+  isolation: isolate;
+}
+
+.wave-bottom::after {
+  position: absolute;
+  z-index: -1;
+  right: -10vw;
+  bottom: -3.5rem;
+  left: -10vw;
+  height: 7rem;
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+  background: #dcedfb;
+  content: '';
+}
+
+@media (max-width: 640px) {
+  .page-width {
+    width: min(100% - 2rem, 42rem);
+  }
+
+  .page-content {
+    padding-block: 2.5rem 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

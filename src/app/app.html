@@ -1,0 +1,41 @@
+<a class="skip-link" href="#main">Über mich</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" routerLink="/" aria-label="Praxis für Logopädie Cora-Zoé Grube">
+      <img ngSrc="/images/praxis-logo.png" width="72" height="72" alt="" priority />
+      <span>Praxis für Logopädie Cora-Zoé Grube</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Navigation">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        >Über mich</a
+      >
+      <a routerLink="/leistungen" routerLinkActive="active" ariaCurrentWhenActive="page"
+        >Leistungen</a
+      >
+      <a routerLink="/terminvergabe" routerLinkActive="active" ariaCurrentWhenActive="page"
+        >Terminvergabe</a
+      >
+      <a routerLink="/kontakt" routerLinkActive="active" ariaCurrentWhenActive="page">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <a class="footer-brand" routerLink="/">Praxis für Logopädie Cora-Zoé Grube</a>
+  <nav aria-label="Navigation">
+    <a routerLink="/">Über mich</a>
+    <a routerLink="/leistungen">Leistungen</a>
+    <a routerLink="/terminvergabe">Terminvergabe</a>
+    <a routerLink="/kontakt">Kontakt</a>
+  </nav>
+</footer>

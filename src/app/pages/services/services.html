@@ -1,0 +1,47 @@
+<section class="page-hero services-hero">
+  <div class="page-width hero-inner">
+    <h1 class="page-heading">Leistungen</h1>
+    <!--div class="hero-emblem">
+      <img ngSrc="/images/praxis-logo.png" width="300" height="300" alt="" priority />
+      <p>Praxis für Logopädie Cora-Zoé Grube</p>
+    </div-->
+  </div>
+</section>
+
+<section class="page-width page-content services-content wave-bottom">
+  <p class="lead-copy">
+    Die Logopädie umfasst die Diagnostik und Therapie von Sprach-, Sprech-, Stimm- und
+    Schluckstörungen sowie weiteren Beeinträchtigungen der Kommunikationsfähigkeit. Mein
+    therapeutisches Angebot richtet sich an Kinder, Jugendliche und Erwachsene und wird individuell
+    auf die jeweiligen Bedürfnisse, Fähigkeiten und Therapieziele abgestimmt.
+  </p>
+
+  <ul class="therapy-list soft-panel">
+    @for (area of therapyAreas; track area) {
+      <li>{{ area }}</li>
+    }
+  </ul>
+
+  <p class="follow-up">
+    Ihr Störungsbild ist nicht aufgeführt oder Sie sind sich unsicher, ob eine logopädische
+    Behandlung für Sie oder Ihr Kind infrage kommt? Kontaktieren Sie mich gerne. Gemeinsam klären
+    wir Ihr Anliegen und besprechen die individuellen Behandlungsmöglichkeiten.
+  </p>
+
+  <article class="home-visits soft-panel">
+    <div class="home-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none">
+        <path d="M8 29 32 9l24 20M14 25v29h16V38h10v16h10V25" />
+      </svg>
+    </div>
+    <div>
+      <h2>Hausbesuche und Besuche in Einrichtungen</h2>
+      <div class="section-rule"></div>
+      <p>
+        Sofern es aus medizinischen Gründen erforderlich ist, biete ich logopädische Hausbesuche in
+        Tostedt und der umliegenden Region an. Nach individueller Absprache sind auch Besuche in
+        Kindertagesstätten, Schulen und Pflegeeinrichtungen möglich.
+      </p>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,144 @@
+:host {
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 1rem;
+  transform: translateY(-180%);
+  border-radius: 0.25rem;
+  background: var(--navy);
+  color: white;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  background: var(--ivory);
+}
+
+.header-inner {
+  display: flex;
+  width: min(100% - 3rem, 76rem);
+  min-height: 6.25rem;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--cobalt);
+  font-size: 1.15rem;
+  line-height: 1.18;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.site-nav,
+.site-footer nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+.site-nav a,
+.site-footer nav a {
+  padding-block: 0.45rem;
+  border-bottom: 2px solid transparent;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  border-color: var(--cobalt);
+  color: var(--cobalt);
+}
+
+.site-footer {
+  display: flex;
+  min-height: 8rem;
+  padding: 2rem max(1.5rem, calc((100% - 76rem) / 2));
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--navy);
+  color: white;
+}
+
+.footer-brand {
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.site-footer nav a {
+  color: white;
+}
+
+.site-footer nav a:hover {
+  border-color: white;
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    width: min(100% - 2rem, 42rem);
+    padding-block: 0.8rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .brand img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+    overflow-x: auto;
+  }
+
+  .site-nav a {
+    font-size: 0.9rem;
+  }
+
+  .site-footer {
+    padding: 2rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
