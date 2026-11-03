@@ -96,7 +96,7 @@
   .hero-photo {
     width: min(100%, 34rem);
     height: auto;
-    aspect-ratio: 1.1;
+    aspect-ratio: 3 / 4;
     justify-self: center;
   }
 
